@@ -101,9 +101,6 @@ header h1 {
     padding: 8px 12px;
     background-color: var(--emerald-green);
     color: var(--white);
-}
-
-#menu {
     font-family: Roboto, sans-serif;
     position: absolute;
     top: 1.6rem;
@@ -218,9 +215,6 @@ section img {
     height: auto;
     width: 80%;
     display: block;
-}
-
-section img {
     border-radius: 10px;
     margin: 0 auto;
 }
@@ -245,9 +239,6 @@ section p {
 .courseButton {
     flex: 1 1 100%;
     margin: 5px;
-}
-
-.courseButton {
     display: inline-block;
     padding: 0.25rem 1rem;
     border-radius: 5rem;
@@ -294,16 +285,10 @@ section p {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.course {
     border: var(--almost-black-green) solid 2px;
     width: 80%;
     padding: 10px;
     border-radius: 5px;
-}
-
-.course {
     transition: all 0.3s;
     position: relative;
 }
@@ -312,8 +297,8 @@ section p {
     font-size: var(--font-size-small);
     margin: 0;
     padding: 0;
+    transition: all 0.3s;
 }
-
 .courseNoComplete {
     background-color: var(--white);
     color: var(--almost-black-green);
@@ -322,9 +307,6 @@ section p {
 .courseComplete {
     background-color: var(--dark-green);
     color: white;
-}
-.course h3 {
-    transition: all 0.3s;
 }
 .course::before {
     content: "";
@@ -397,8 +379,6 @@ footer {
 
 footer p {
     margin: 0;
-}
-footer p {
     text-align: center;
     padding: 10px;
 }
