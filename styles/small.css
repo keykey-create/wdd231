@@ -161,6 +161,18 @@ nav a.active {
     content: "X";
 }
 /*Content*******************/
+
+.socialmedia{
+    display: flex;
+    justify-content: center
+}
+
+.socialmedia img {
+    width: 100px;
+    height: auto;
+    justify-content: center;
+}
+
 main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
