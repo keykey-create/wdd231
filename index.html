@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Home page for my wdd231 course">
+    <meta name="author" content="Keyarra Bassett">
+    <meta property="og:title" content="Home | Keyarra Bassett">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://keykey-create.github.io/wdd231/index.html">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>Home | Keyarra Bassett</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/courses.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="content">
+            <img class="avatar" src="images/profilepicture.png" alt="Keyarra Bassett photo">
+            <a href="https://picrew.me/en/image_maker/1564386">Avatar by Crowsn on Picrew</a>
+
+        </div>
+        <h1>Keyarra Bassett</h1>
+        <button id="menu" title="Menu"></button>
+    </header>
+    <nav>
+        <ul>
+            <li><a class="active" href="/index.html">Home</a></li>
+            <li><a href="chamber/index.html" target="_blank">Chamber Project</a></li>
+            <li><a href="final/index.html" target="_blank">Final Project</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="aboutMe-box">
+            <h2>About Me</h2>
+            <ul>
+                <p>Hello! I am Keyarra Bassett from Cheyenne Wyoming. I served my mission in Ascuncion Paraguay. I like to crochet, and to hike. I recently got to visit Alaska, where i got to see a glacier calve into the see.</p>
+            </ul>
+        </section>
+        <section class="picture-box">
+            <h2>Pictures</h2>
+            <picture>
+                <img src="images/keyarrapicture.jpg" alt="picture of Keyarra looking at a waterfall" width="300" height="auto">
+            </picture>
+            <p>Panama City</p>
+        </section>
+        <section class="certificate-box">
+            <h2>Web and Computer Programming certificate</h2>
+            <div class="boxButton">
+                <button class="courseButton" value="all" title="Filter button">All</button>
+                <button class="courseButton" value="cse" title="Filter button">CSE</button>
+                <button class="courseButton" value="wdd" title="Filter button">WDD</button>
+            </div>
+            <div class="boxcertificate01 boxCourse"></div>
+            <dialog id="courses-details"></dialog>
+            <p id="totalCreditsCert01">Total Credits for Certificate 1: 0</p>
+        </section>
+
+    </main>
+<footer>
+        <p>
+            <span id="currentyear">year </span> | Keyarra Bassett | United States
+        </p>
+        <p id="lastModified">Lorem ipsum dolor, sit amet consectetur </p>
+    </footer>
+</body>
+
+</html>

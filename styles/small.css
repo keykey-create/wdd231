@@ -1,0 +1,437 @@
+:root {
+
+    /* CSS HEX */
+    --true-green: rgb(50, 200, 4);
+    --dark-green: rgb(9, 84, 36);
+    --emerald-green: rgb(2, 48, 3);
+    --almost-black-green: rgb(1, 32, 1);
+    --mint-green-gray: rgb(125, 151, 139);
+    --cool-gray: #979dacff;
+    --white: rgb(255, 255, 255);
+
+    /* Text Colors */
+    /* Headlines on a white background */
+    --headline-color-on-white: var(--almost-black-green);
+    /* Headlines on a colored background */
+    --headline-color-on-color: var(--white);
+    /* Paragraph text on a white background */
+    --paragraph-color-on-white: var(--secondary-color);
+    /* Paragraph text on a colored background */
+    --paragraph-color-on-color: var(--accent3-color);
+
+    --paragraph-background-color: var(--white);
+
+    /* Navigation Colors */
+    --nav-link-color: var(--almost-black-green);
+    --nav-background-color: var(--cool-gray);
+    --nav-hover-link-color: var(--almost-black-green);
+    --nav-hover-background-color: var(--true-green);
+
+    --barlow-regular-font-family: "Barlow", sans-serif;
+    --barlow-regular-font-weight: 400;
+    --barlow-regular-font-style: normal;
+
+    --lato-regular-font-family: "Lato", sans-serif;
+    --lato-regular-font-weight: 400;
+    --lato-regular-font-style: normal;
+
+    --font-size-small: 16px;
+    --font-size-base: 20px;
+    --font-size-large: 24px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+li {
+    font-family: var(--lato-regular-font-family);
+}
+
+p {
+    font-family: var(--barlow-regular-font-family);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Header */
+header,
+footer {
+    background-color: var(--emerald-green);
+    color: var(--white);
+}
+
+header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+
+.avatar {
+    width: 100px;
+    height: auto;
+    box-sizing: border-box;
+    border: 2.5px var(--white) solid;
+    margin: 1.5rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+
+}
+
+header h1 {
+    margin-left: 20px;
+    font-size: var(--font-size-base);
+    font-weight: bold;
+}
+
+/* mobile **************************/
+/*Hamburger menu*/
+
+#menu {
+    display: block;
+    font-size: 40px;
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: var(--emerald-green);
+    color: var(--white);
+}
+
+#menu {
+    font-family: Roboto, sans-serif;
+    position: absolute;
+    top: 1.6rem;
+    right: 1.5rem;
+    cursor: pointer;
+    border: 0;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+nav {
+    background-color: var(--dark-green);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: none;
+    border-bottom: 1px solid #555;
+}
+
+nav a {
+    display: block;
+    color: var(--white);
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+nav a:hover:not(.active) {
+    background-color: var(--nav-hover-background-color);
+    color: var(--nav-hover-link-color);
+}
+
+nav li:last-child {
+    border-bottom: none;
+}
+
+nav a.active {
+    background-color: #fef9d9;
+    color: var(--almost-black-green);
+}
+
+.open li {
+    display: block;
+}
+
+#menu.open::before {
+    content: "X";
+}
+/*Content*******************/
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+    grid-gap: 1em;
+    margin: 20px;
+    flex: 1;
+}
+
+main section {
+    border-radius: 5px;
+    box-shadow: 6px 4px 8px;
+    margin: 10px auto;
+    background-color: var(--paragraph-background-color);
+    width: fit-content;
+    text-align: center;
+}
+
+section h2 {
+    background-color: var(--almost-black-green);
+    color: var(--headline-color-on-color);
+    margin: 0;
+    border-radius: 5px 5px 0 0;
+    font-size: var(--font-size-base);
+    padding: 10px 0;
+}
+
+section ul {
+    padding: 0 40px;
+    margin: 10px 0;
+}
+
+section li {
+    text-align: left;
+    font-size: var(--font-size-small);
+}
+
+picture {
+    padding: 10px;
+    max-width: 300px;
+}
+
+section img {
+    height: auto;
+    width: 80%;
+    display: block;
+}
+
+section img {
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+section p {
+    font-size: var(--font-size-small);
+    margin: 0 0 10px 0;
+}
+
+.boxcertificate01 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.boxButton {
+    padding-top: 10px;
+}
+
+.courseButton {
+    flex: 1 1 100%;
+    margin: 5px;
+}
+
+.courseButton {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    border-radius: 5rem;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+.courseButton:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--mint-green-gray);
+    border-radius: 5rem;
+    z-index: -2;
+}
+.courseButton:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--white);
+    transition: all 0.3s;
+    border-radius: 5rem;
+    z-index: -1;
+}
+.courseButton:hover {
+    color: var(--almost-black-green);
+}
+.courseButton:hover:before {
+    width: 100%;
+}
+
+.course {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course {
+    border: var(--almost-black-green) solid 2px;
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.course {
+    transition: all 0.3s;
+    position: relative;
+}
+
+.course h3 {
+    font-size: var(--font-size-small);
+    margin: 0;
+    padding: 0;
+}
+
+.courseNoComplete {
+    background-color: var(--white);
+    color: var(--almost-black-green);
+}
+
+.courseComplete {
+    background-color: var(--dark-green);
+    color: white;
+}
+.course h3 {
+    transition: all 0.3s;
+}
+.course::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(0, 18, 51, 0.468);
+    border-bottom-color: rgba(0, 18, 51, 0.468);
+    transform: scale(0.1, 1);
+}
+.course:hover h3 {
+    letter-spacing: 2px;
+}
+.course:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+.course::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.5s;
+    background-color: rgba(8, 118, 227, 0.1);
+}
+.course:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+}
+
+dialog {
+    border: 1px solid var(--almost-black-green);
+    border-radius: 0.25rem;
+    padding: 1rem;
+    background-color: var(--paragraph-background-color);
+    box-shadow: 0 0 3rem var(--almost-black-green);
+    width: 90%;
+    max-width: 600px;
+}
+
+::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog button {
+    position: absolute;
+    top: 23px;
+    right: 23px;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--almost-black-green);
+}
+
+/*Footer */
+
+footer {
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+footer p {
+    text-align: center;
+    padding: 10px;
+}
+
+@media (min-width: 480px) {
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    main {
+        max-width: 768px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+        margin: 10px auto;
+    }
+
+    main p {
+        font-size: var(--font-size-base);
+    }
+
+    section {
+        flex-basis: 15em;
+        flex-grow: 1;
+    }
+
+    .boxcertificate01 {
+        width: 650px;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
+        grid-gap: 1em;
+    }
+
+    .course {
+        padding: 10px;
+    }
+}
