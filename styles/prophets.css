@@ -1,0 +1,84 @@
+:root{
+  --primary-color:#333333;
+  --secondary-color: #000000;
+  --third-color:#CCCCCC;  
+  --fourth-color:#FFFFFF;
+  --font-family: "Lobster", "Noto Sans";
+  --main-bg-color: #ffffff;
+  --main-text-color: #000000;
+  --title-font: "Lobster", sans-serif;
+  --h2-font: "Noto Sans", sans-serif;
+}
+
+body{
+  font-family: "Lobster", "Noto Sans", sans-serif;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.75); /* Add shadow */
+  border: 2px solid #ccc;                   /* Add border */
+  border-radius: 10px;                       /* Optional: rounded corners */
+}
+
+img{
+  border-radius: 5%;
+  box-shadow: 0 4px 16px rgba(0,0,0,1);
+}
+
+header{
+  background-color: var(--main-bg-color);
+  padding: 20px;
+  text-align: center;
+}
+
+h1{
+  color: var(--main-text-color);
+}
+
+h2{
+  color: var(--primary-color);
+  text-align: center;
+}
+
+p{
+  font-family: var(--h2-font);
+  color: var(--main-text-color);
+  line-height: 1.6;
+  text-align: center;
+}
+section{
+  margin: 10px 0;
+  
+  background-color: var(--third-color);
+  border-radius: 5%;
+  padding: 10px;
+}
+
+/* Example grid container */
+#cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  justify-items: center; /* This centers the content (including images) horizontally */
+  align-items: center;    /* This centers the content vertically (optional) */
+}
+
+/* Center images inside grid items */
+#cards img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 340px; /* Set a max width for images */
+  width: 100%;        /* Makes image responsive */
+  height: auto;      /* Maintains aspect ratio */
+}
+
+footer{
+  background-color: var(--main-bg-color);
+  padding: 20px;
+  text-align: center;
+  color: var(--main-text-color);
+}
