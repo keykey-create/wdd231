@@ -21,7 +21,6 @@ main {
     margin: 0 auto;
     border: 2px solid var(--king-kong);
     border-radius: 10px;
-    background-color: var(--white);
     color: var(--king-kong);
 }
 
