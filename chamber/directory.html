@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Social media tags -->
+    <meta property="og:title" content="Cheyenne Chamber of Commerce | Directory">
+    <meta property="og:image"
+        content="https://keykey-create.github.io/wdd231/chamber/images/sealofcheyennewyoming.png">
+    <meta property="og:url" content="https://keykey-create.github.io/wdd231/chamber/directory.html">
+    <meta property="og:description" content="Chamber of commerce for cheyenne wyoming, come look at local businesses.">
+    
+
+
+    <title>Cheyenne Chamber of Commerce | Directory </title>
+    <meta name="description" content="Chamber of commerce directory page for Cheyenne Wyoming" />
+    <meta name="author" content="Keyarra Bassett" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap">
+    </noscript>
+
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/small.css" />
+    <link rel="stylesheet" href="styles/large.css" />
+
+    <script type="module" src="./scripts/app.js"></script>
+    <script src="./scripts/directory.js" defer></script>
+
+
+    <link rel="icon" href="images/favicon.ico" sizes="48x48" type="image/ico">
+</head>
+
+<body id="directory-page">
+    <header>
+        <nav>
+            <div class="box-logo-header">
+                <img class="logo-chamber" src="images/sealofcheyennewyoming.png"
+                    alt="Logo of Cheyenne Wyoming" />
+                <h1 class="nameHeader">Cheyenne Wyoming<br>Chamber of Commerce</h1>
+                <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
+            </div>
+            <ul>
+                <li><a class="nav-a " href="./index.html">Home</a></li>
+                <li><a class="nav-a " href="./discover.html">Discover</a></li>
+                <li><a class="nav-a " href="./directory.html">Directory</a></li>
+                <li><a class="nav-a " href="./join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="Main-title">Directory</h2>
+        <div class="button-box">
+            <button title="List view" class='mybtn activebtn' id="list-view-btn"><i class='fas fa-list'>List</i></button>
+            <button title="Grid view" class='mybtn' id="grid-view-btn"><i class='fas fa-border-all'>Grid</i></button>
+        </div>
+
+        <div id="directory-box"></div>
+    </main>
+    <footer>
+        <p><span id="currentyear">Lorem</span> Keyarra Bassett |
+            United States</p>
+        <p id="lastModified">Lorem ipsum</p>
+    </footer>
+</body>
+
+</html>
