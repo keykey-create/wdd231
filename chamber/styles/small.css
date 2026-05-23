@@ -1,12 +1,17 @@
 :root {
     /* CSS HEX */
     --black: #000000;
-    --dark-grey: #171210;
+    --king-kong: #171210;
     --film-noir: #443932;
-    --light-grey: #868686;
+    --lunar-base: #868686;
+    --big-fish-to-fry: #dadce0;
     --white: #ffffff;
+
+    --oxford-blue: #0a1f44;
     --alice-blue: #f0f8ff;
     --yale-blue: #00356b;
+
+    /* Fonts */
 
     --poppins-heading-font: "Poppins", sans-serif;
     --poppins-regular-font-weight: 400;
@@ -24,7 +29,7 @@
 
     /* Text Colors */
     /* Headlines */
-    --headline-color-on-white: var(--dark-grey); /* On light backgrounds */
+    --headline-color-on-white: var(--king-kong); /* On light backgrounds */
     --headline-color-on-color: var(--white); /* On dark backgrounds */
 
     /* Paragraph Text */
@@ -42,10 +47,10 @@
     --nav-hover-background-color: var(--film-noir);
 
     /* Button Colors */
-    --btn-background-color: var(--dark-grey); /* Primary button background */
+    --btn-background-color: var(--king-kong); /* Primary button background */
     --btn-background-white: var(--white); /* Button background for white */
     --btn-font-on-color: var(--white); /* Text color on dark backgrounds */
-    --btn-font-on-white: var(--light-grey); /* Text color on white background */
+    --btn-font-on-white: var(--lunar-base); /* Text color on white background */
 
     /* Common Styles */
     --box-shadow: 0 4px 8px var(--paragraph-background-color);
@@ -177,6 +182,153 @@ nav li:last-child {
     content: "X";
 }
 
+/* Discover page */
+
+/* Estilo general */
+main.discover {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna por defecto (para pantallas pequeñas) */
+    gap: 20px;
+    padding: 20px;
+    width: 100%; /* Ocupa todo el ancho por defecto */
+    max-width: 700px; /* Máximo ancho para pantallas grandes */
+    margin: 0 auto; /* Centrar el contenido en la pantalla */
+}
+
+/* Sidebar en una columna */
+.discover .side-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Artículos en la barra lateral */
+.discover .side-bar article {
+    background-color: var(--paragraph-background-white);
+    border: 1px solid var(--big-fish-to-fry);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Estilo para el artículo de evento futuro */
+.article-02 img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.article-02 img.fade-in {
+    opacity: 1;
+}
+
+.article-02 h3 {
+    text-align: center;
+    font-family: var(--poppins-heading-font);
+    font-weight: var(--poppins-bold-font-weight);
+    margin-bottom: 10px;
+}
+
+/* Estilos del calendario */
+#calendar {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#calendar caption {
+    text-align: left;
+    padding: 5px 10px;
+    background-color: #003366;
+    color: #fff;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#calendar th,
+#calendar td {
+    border: 1px solid var(--big-fish-to-fry);
+    padding: 8px;
+    text-align: center;
+}
+
+#calendar .hoy {
+    background-color: red;
+}
+
+/* Sección de Demografía */
+.article-01 {
+    font-family: var(--open-sans-paragraph-font);
+    font-weight: var(--open-sans-font-weight);
+    background-color: var(--paragraph-background-white);
+    border: 1px solid var(--big-fish-to-fry);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.article-01 header h3 {
+    font-family: var(--poppins-heading-font);
+    font-weight: var(--poppins-bold-font-weight);
+    color: var(--headline-color-on-white);
+    font-size: var(--font-size-large);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--yale-blue);
+    padding-bottom: 5px;
+}
+
+.article-01 ul {
+    list-style-type: none; /* Quitar viñetas */
+    padding: 0;
+}
+
+.article-01 li {
+    font-size: var(--font-size-base);
+    margin-bottom: 8px;
+    color: var(--paragraph-color-on-white);
+}
+
+.article-01 strong {
+    color: var(--king-kong);
+    font-weight: var(--poppins-bold-font-weight);
+}
+
+/* Sección de fotos locales */
+.local-photos {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    gap: 20px;
+    margin: 20px 0;
+    justify-items: center;
+}
+
+.local-photos figure {
+    max-width: 100%;
+    text-align: center;
+}
+
+.local-photos img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.local-photos img:not(.lazy-image) {
+    opacity: 1;
+}
+
+.local-photos figcaption {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+}
 
 /* Footer */
 footer {
@@ -197,6 +349,7 @@ footer p:first-child {
     margin-top: 5px;
 }
 
+/* Larger Views ******************************/
 @media (min-width: 860px) {
     header {
         flex-wrap: wrap;
@@ -245,7 +398,9 @@ footer p:first-child {
         margin-bottom: 5px;
     }
 
-   
+    /*nav a:hover:not(.active) {
+    color: var(--nav-hover-link-color);
+}*/
     .nav-a:hover {
         color: var(--nav-hover-link-color);
     }
@@ -267,12 +422,12 @@ footer p:first-child {
 
     .nav-a::before {
         transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
-        background: var(--light-grey);
+        background: var(--lunar-base);
     }
 
     .nav-a::after {
         transition: width 0.2s cubic-bezier(0.29, 0.18, 0.26, 0.83);
-        background: var(--dark-grey);
+        background: var(--king-kong);
     }
 
     nav li:last-child {
@@ -282,6 +437,18 @@ footer p:first-child {
     #menu {
         display: none;
     }
+
+    /* ---- Discover Page ----*/
+
+
+    main.discover {
+        grid-template-columns: 1fr 3fr; /* Dos columnas: Sidebar 1/4 y contenido 3/4 */
+    }
+
+    .local-photos {
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(200px, 1fr)
+        ); /* Varias columnas para las fotos */
+    }
 }
-
-

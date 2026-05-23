@@ -1,0 +1,24 @@
+{
+    "events": [
+        {
+            "name": "Cheyenne Frontier Days",
+            "date": "2026-07-17"
+        },
+        {
+            "name": "LeatherCraft Class",
+            "date": "2026-05-25"
+        },
+        {
+            "name": "Legally Blonde the Musical",
+            "date": "2026-06-20"
+        },
+        {
+            "name": "Live Jazz",
+            "date": "2026-05-24 Recurring every Week"
+        },
+        {
+            "name": "Capitol Art Exhibition",
+            "date": "2026-08-08"
+        }
+    ]
+}
