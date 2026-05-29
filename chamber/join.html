@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber | Recife Chamber of Commerce</title>
+    <meta name="description" content="Join the Recife Chamber of Commerce to grow your business and connect with the community.">
+    <meta name="author" content="Lucas Miranda">
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Join the Recife Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lucas-lab2.github.io/wdd231/chamber/images/hero-social.webp">
+    <meta property="og:url" content="https://lucas-lab2.github.io/wdd231/chamber/join.html">
+    <meta property="og:description" content="Become a member of the Recife Chamber of Commerce. Fill out our application to access exclusive benefits and networking opportunities to help your business grow.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo.webp" alt="Recife Chamber Logo" class="logo">
+            <div class="site-name">Recife Chamber of Commerce</div>
+            <button id="menu-button" aria-label="Toggle navigation menu">☰</button>
+        </div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="join-main">
+        <h1>Join Our Chamber</h1>
+        <div class="join-grid">
+            <form action="thankyou.html" method="get" class="join-form">
+                <fieldset>
+                    <legend>Applicant Information</legend>
+                    <label>First Name* <input type="text" name="fname" id="fname" required autocomplete="given-name" title="Your First Name"></label>
+                    <label>Last Name* <input type="text" name="lname" id="lname" required autocomplete="family-name" title="Your Last Name"></label>
+                    <label>Title/Position <input type="text" name="title" id="title" pattern="[a-zA-Z\s\-]{7,}" autocomplete="organization-title" title="Your Title (min 7 alpha characters, spaces, or hyphens)"></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Contact Information</legend>
+                    <label>Email* <input type="email" name="email" id="email" required autocomplete="email" placeholder="example@email.com" title="Your Email Address"></label>
+                    <label>Mobile Phone* <input type="tel" name="phone" id="phone" required autocomplete="tel" title="Your Mobile Phone Number"></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Business Information</legend>
+                    <label>Business/Organization Name* <input type="text" name="organization" id="organization" required autocomplete="organization" title="Your Business or Organization's Name"></label>
+                    <label>Business Description <textarea name="description" id="description" title="Brief Description of Your Business"></textarea></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Membership Level</legend>
+                    <div class="membership-options">
+                        <label><input type="radio" name="membership" value="np" required> NP Membership (Non-Profit)</label>
+                        <label><input type="radio" name="membership" value="bronze"> Bronze Membership</label>
+                        <label><input type="radio" name="membership" value="silver"> Silver Membership</label>
+                        <label><input type="radio" name="membership" value="gold"> Gold Membership</label>
+                    </div>
+                </fieldset>
+                
+                <input type="hidden" name="timestamp" id="timestamp">
+                <input type="submit" value="Join the Chamber" class="submit-btn">
+            </form>
+
+            <section class="membership-levels">
+                <h2>Membership Benefits</h2>
+                <div class="membership-card" id="np-card">
+                    <h3>NP (Non-Profit)</h3>
+                    <p>For non-profit organizations. Basic directory listing.</p>
+                    <button type="button" class="modal-trigger" data-modal-target="np-modal">Learn More</button>
+                </div>
+                <div class="membership-card" id="bronze-card">
+                    <h3>Bronze</h3>
+                    <p>Ideal for small businesses starting out.</p>
+                    <button type="button" class="modal-trigger" data-modal-target="bronze-modal">Learn More</button>
+                </div>
+                <div class="membership-card" id="silver-card">
+                    <h3>Silver</h3>
+                    <p>Enhanced visibility and event discounts.</p>
+                    <button type="button" class="modal-trigger" data-modal-target="silver-modal">Learn More</button>
+                </div>
+                <div class="membership-card" id="gold-card">
+                    <h3>Gold</h3>
+                    <p>Premier benefits, including homepage spotlights.</p>
+                    <button type="button" class="modal-trigger" data-modal-target="gold-modal">Learn More</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p><span id="currentyear">Lorem</span> Keyarra Bassett |
+            United States</p>
+        <p id="lastModified">Lorem ipsum</p>
+    </footer>
+
+    <dialog id="np-modal">
+        <button class="modal-close">X</button>
+        <h2>NP Membership Benefits</h2>
+        <ul>
+            <li>Basic listing in the Chamber Directory</li>
+            <li>Access to community newsletters</li>
+            <li>Invitation to select networking events</li>
+        </ul>
+    </dialog>
+    <dialog id="bronze-modal">
+        <button class="modal-close">X</button>
+        <h2>Bronze Membership Benefits</h2>
+        <ul>
+            <li>All NP benefits, plus:</li>
+            <li>Enhanced Directory Listing</li>
+            <li>10% discount on event tickets</li>
+        </ul>
+    </dialog>
+    <dialog id="silver-modal">
+        <button class="modal-close">X</button>
+        <h2>Silver Membership Benefits</h2>
+        <ul>
+            <li>All Bronze benefits, plus:</li>
+            <li>Company logo in directory</li>
+            <li>25% discount on event tickets</li>
+            <li>Eligible for Member Spotlights</li>
+        </ul>
+    </dialog>
+    <dialog id="gold-modal">
+        <button class="modal-close">X</button>
+        <h2>Gold Membership Benefits</h2>
+        <ul>
+            <li>All Silver benefits, plus:</li>
+            <li>Guaranteed Homepage Member Spotlight</li>
+            <li>Two complimentary tickets to all events</li>
+            <li>Featured article in the quarterly newsletter</li>
+        </ul>
+    </dialog>
+</body>
+</html>

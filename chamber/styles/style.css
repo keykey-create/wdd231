@@ -1,0 +1,627 @@
+
+/* --- Root Variables --- */
+:root {
+    --primary-color: #44260d; /* Deep Brown */
+    --secondary-color: #f0ad4e; /* Sandy Gold */
+    --background-color: #f4f4f4; /* Light Gray */
+    --text-color: #333333;
+    --card-background: #ffffff;
+    --footer-background: #412505;
+    --light-text-color: #ffffff;
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* --- Base Styles --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.site-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 1rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    max-height: 50px;
+}
+
+#menu-button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--light-text-color);
+    cursor: pointer;
+    display: block;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Hidden by default on mobile */
+    flex-direction: column;
+}
+
+nav ul.open {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    color: var(--light-text-color);
+    text-decoration: none;
+    padding: 0.8rem 0;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* --- Main Content --- */
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.directory-main h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.view-toggle {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.view-toggle button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.view-toggle button.active {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+/* --- Members Container --- */
+#members-container {
+    transition: all 0.5s ease-in-out;
+}
+
+/* --- Grid View Styles --- */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.grid section {
+    background-color: var(--card-background);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid img {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.grid h3 {
+    color: var(--primary-color);
+    margin: 0.5rem 0;
+}
+
+.grid p, .grid a {
+    font-size: 0.9rem;
+    word-break: break-word;
+}
+
+/* --- List View Styles --- */
+.list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.list section {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1.5fr;
+    align-items: center;
+    padding: 0.75rem;
+    background-color: var(--card-background);
+    border-bottom: 1px solid #ddd;
+}
+
+.list section:last-child {
+    border-bottom: none;
+}
+
+.list section:nth-child(odd) {
+    background-color: #e9f1f6;
+}
+
+.list img {
+    display: none; /* Images are hidden in list view */
+}
+
+.list h3, .list p, .list a {
+    margin: 0;
+    padding: 0 0.5rem;
+    font-size: 0.9rem;
+    text-align: left;
+    word-break: break-all;
+}
+.list h3 { font-weight: bold;}
+
+
+/* --- Footer --- */
+footer {
+    background-color: var(--footer-background);
+    color: var(--light-text-color);
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Media Query for Larger Screens --- */
+@media (min-width: 768px) {
+    #menu-button {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 0.5rem 1.5rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    .list section {
+        grid-template-columns: 2fr 3fr 2fr 2fr;
+    }
+    .list p, .list a { font-size: 1rem; }
+}
+
+/* --- HOME PAGE STYLES --- */
+.hero {
+    position: relative;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.cta-container {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    transform: scale(1.05);
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.events-card, .weather-card {
+    background-color: var(--card-background);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.current-weather {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#forecast-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.forecast-day {
+    padding: 0.5rem;
+}
+
+.spotlights {
+    margin-top: 1rem;
+    background-color: #e9f1f6;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.spotlights-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.spotlight-card {
+    background-color: var(--card-background);
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Responsive layout for home page grid */
+@media (min-width: 768px) {
+    .home-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .spotlights-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}.spotlight-card {
+    background-color: var(--card-background);
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    
+    /* --- Add these three lines for perfect centering --- */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Also add this rule for better spacing around the image */
+.spotlight-card img {
+    margin-bottom: 1rem;
+}
+
+/* --- UTILITY CLASSES --- */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* --- JOIN PAGE STYLES --- */
+.join-main h1 {
+    text-align: center;
+}
+
+.join-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.join-form fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.join-form legend {
+    font-weight: bold;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+}
+
+.join-form label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.join-form input[type="text"],
+.join-form input[type="email"],
+.join-form input[type="tel"],
+.join-form textarea {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.join-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.membership-options label {
+    margin-bottom: 0.5rem;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Membership cards and animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.membership-card {
+    background-color: var(--card-background);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 0.5s ease-out forwards;
+}
+#np-card { animation-delay: 0.1s; }
+#bronze-card { animation-delay: 0.2s; }
+#silver-card { animation-delay: 0.3s; }
+#gold-card { animation-delay: 0.4s; }
+
+/* Modals */
+dialog {
+    width: 80%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* --- THANK YOU PAGE STYLES --- */
+.thankyou-main {
+    text-align: center;
+    padding: 2rem;
+}
+
+.summary {
+    background-color: var(--card-background);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 2rem;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive layout for Join page */
+@media (min-width: 900px) {
+    .join-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* --- DISCOVER PAGE STYLES --- */
+.discover-main h1 {
+    text-align: center;
+}
+
+.visit-message {
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+.discover-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.attraction-card {
+    background-color: var(--card-background);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.attraction-card figure {
+    margin: 0;
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.card-content {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.card-content address {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.card-content button {
+    margin-top: auto; /* Pushes button to the bottom */
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* --- GRID TEMPLATE AREAS --- */
+
+/* Small Screens (320px - 640px) */
+@media (max-width: 640px) {
+    .discover-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Medium Screens (641px - 1024px) */
+@media (min-width: 641px) {
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "att1 att2"
+            "att3 att3"
+            "att4 att5"
+            "att6 att7"
+            "att8 att8";
+    }
+    #attraction-3, #attraction-8 { grid-area: att3; }
+    /* Other cards will auto-fill the remaining areas */
+
+    /* Image hover effect for medium screens and up */
+    .attraction-card:hover img {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+    }
+}
+
+/* Large Screens (1025px and above) */
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "att1 att1 att2"
+            "att3 att4 att2"
+            "att5 att6 att7"
+            "att5 att8 att8";
+    }
+    #attraction-1 { grid-area: att1; }
+    #attraction-2 { grid-area: att2; }
+    #attraction-5 { grid-area: att5; }
+    #attraction-8 { grid-area: att8; }
+}

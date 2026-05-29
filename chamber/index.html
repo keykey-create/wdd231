@@ -1,108 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyarra Bassett Chamber of Commerce | Home</title>
+    <meta name="description" content="The chamber of commerce home page for Cheyenne built for a school project">
+    <meta name="author" content="Keyarra Bassett">
 
-    <!-- Social media tags -->
-    <meta property="og:title" content="Keyarra Bassett chamber of commerce project home page">
-    <meta property="og:image"
-        content="https://keykey-create.github.io/wdd231/chamber/images/sealofcheyennewyoming.png">
+    <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Keyarra Bassett Chamber of Commerce home page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://keykey-create.github.io/wdd231/chamber/images/misterlogo.webp">
     <meta property="og:url" content="https://keykey-create.github.io/wdd231/chamber/index.html">
-    <meta property="og:description" content="Chamber of commerce for cheyenne wyoming, come look at local businesses.">
-    
-
-
-    <title>Keyarra Bassett Chamber of Commerce Home Page </title>
-    <meta name="description" content="Keyarra Bassett chamber of commerce project home page" />
-    <meta name="author" content="Keyarra Bassett" />
+    <meta property="og:description" content="The home page for the chamber of commerce website built for my class">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload"
-        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;700&display=swap">
-    </noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/small.css" />
-    <link rel="stylesheet" href="styles/large.css" />
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script src="scripts/index.js" defer></script>
 
 
-    <script src="./scripts/index.js" defer></script>
-    <script src="./scripts/weather.js" defer></script>
-    
-
-
-    <link rel="icon" href="images/favicon.ico" sizes="48x48" type="image/ico">
 </head>
-
-<body id="directory-page">
+<body>
     <header>
+        <div class="header-content">
+            <img src="images/sealofcheyennewyoming.png" alt="City of Cheyenne Logo" class="logo">
+            <div class="site-name">Cheyenne Wyoming</div>
+            <button id="menu-button" aria-label="Toggle navigation menu">☰</button>
+        </div>
         <nav>
-            <div class="box-logo-header">
-                <img class="logo-chamber" src="images/sealofcheyennewyoming.png"
-                    alt="Logo of Cheyenne Wyoming" />
-                <h2 class="nameHeader">Cheyenne Wyoming<br>Chamber of Commerce</h2>
-                <button name="navigation button" id="menu" aria-label="Toggle menu"></button>
-            </div>
-            <ul>
-                <li><a class="nav-a " href="./index.html">Home</a></li>
-                <li><a class="nav-a " href="./discover.html">Discover</a></li>
-                <li><a class="nav-a " href="./directory.html">Directory</a></li>
-                <li><a class="nav-a " href="./join.html">Join</a></li>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
 
-     <main class="home">
-        <h1>Home</h1>
-        <img src="images/hero-chamber.jpg" alt="main-page-image">
-      
-
-            <div class="call-to-action">
-                <h1>Join the Cheyenne Chamber of Commerce today!</h1>
-                <p>Enhance your business network, access exclusive resources, and drive local economic growth.</p>
-                <p>Click here to become a member and start making a difference.</p>
-                <button class="join-us" name="join" onclick="window.location.href='/chamber/join.html'">Join us</button>
+    <main class="home-main">
+        <h1 class="visually-hidden">Cheyenne Wyoming</h1>
+        <section class="hero">
+            <img src="images/hero-chamber.jpg" alt="Cheyenne Capitol Building">
+            <div class="cta-container">
+                <a class="cta-button" href="join.html">Join the Chamber!</a>
             </div>
-        <section class="event-main-box">
-            <article class="event-main">
-                <h2>Current Events</h2>
-                <div id="events-list">
-                </div>
-            </article>
         </section>
-        <section class="spotlights-main-box"></section>
-                <h2>Current Weather</h2>
-                <div id="weather">
-                    <img id="weather-icon" src="images/cloud-and-lightening.svg" alt="weather-icon">
 
-                    <div>
-                        <p><span id="current-temp"></span></p>
+        <div class="home-grid">
+            <section class="events-card">
+                <h2>Current Events</h2>
+                <p><strong>Legally Blonde teh Musical:</strong> Starting on the 20th of June the little theater will be showing Legally Blonde the musical</p>
+                <p><strong>Cheyenne Frontier Days:</strong> Join us for the Daddy of them all! Starting July 17th</p>
+                <p><strong>Live Jazz Sundays</strong> Join us every sunday at the plaza and enjoy some live jazz</p>
+                
+            </section>
+
+            <section class="weather-card">
+                <h2>Weather in Cheyenne</h2>
+                <div class="current-weather">
+                    <img id="weather-icon" src="#" alt="Current weather icon">
+                    <p><span id="current-temp">--</span>°F, <span id="weather-desc">Loading...</span></p>
+                </div>
+                <h3>3-Day Forecast</h3>
+                <div id="forecast-container">
                     </div>
-                </div>
-        </section>
-            <section id="three">
-                <h2>Weather Forecast</h2>
-                <div>
-                    <p><span id="forecast"></span></p>
-                </div>
             </section>
         </div>
-        <button class="list-view " id="disappear">Toggle List View</button>
-        <div class="cards"></div>
+
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlight-container" class="spotlights-grid">
+                </div>
+        </section>
     </main>
 
     <footer>
-        <p><span id="currentyear">Lorem</span> Keyarra Bassett |
-            United States</p>
-        <p id="lastModified">Lorem ipsum</p>
+        <div class="footer-content">
+            <p><span id="current-year"></span> | United States | Keyarra Bassett | WDD 231</p>
+            <p id="last-modified"></p>
+        </div>
     </footer>
 </body>
-
 </html>
