@@ -73,7 +73,7 @@ nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: none; /* Hidden by default on mobile */
+    display: none; 
     flex-direction: column;
 }
 
@@ -338,8 +338,10 @@ footer {
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 /* Responsive layout for home page grid */
 @media (min-width: 768px) {
     .home-grid {
@@ -349,16 +351,6 @@ footer {
     .spotlights-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-}.spotlight-card {
-    background-color: var(--card-background);
-    padding: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    
-    /* --- Add these three lines for perfect centering --- */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 /* Also add this rule for better spacing around the image */
@@ -508,75 +500,6 @@ dialog::backdrop {
     .join-grid {
         grid-template-columns: 2fr 1fr;
     }
-}
-
-/* --- DISCOVER PAGE STYLES --- */
-.discover-main h1 {
-    text-align: center;
-}
-
-.visit-message {
-    text-align: center;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 0.5rem;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-    font-weight: bold;
-}
-
-.discover-grid {
-    display: grid;
-    gap: 1rem;
-}
-
-.attraction-card {
-    background-color: var(--card-background);
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    display: flex;
-    flex-direction: column;
-}
-
-.attraction-card figure {
-    margin: 0;
-}
-
-.attraction-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.card-content {
-    padding: 1rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.card-content h2 {
-    margin-top: 0;
-    color: var(--primary-color);
-}
-
-.card-content address {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 0.5rem;
-}
-
-.card-content button {
-    margin-top: auto; /* Pushes button to the bottom */
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 0.75rem;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
 

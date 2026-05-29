@@ -3,26 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | Timbuktu Chamber of Commerce</title>
-    <meta name="description" content="Thank you for joining the Timbuktu Chamber of Commerce.">
-    <meta name="author" content="Lucas Miranda">
+    <title>Keyarra Bassett Chamber of Commerce | Join Page</title>
+    <meta name="description" content="The chamber of commerce home page for Cheyenne built for a school project">
+    <meta name="author" content="Keyarra Bassett">
+
     <link rel="icon" href="images/favicon.ico">
+
+    <meta property="og:title" content="Keyarra Bassett Chamber of Commerce Join page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://keykey-create.github.io/wdd231/chamber/images/misterlogo.webp">
+    <meta property="og:url" content="https://keykey-create.github.io/wdd231/chamber/join.html">
+    <meta property="og:description" content="The join page for the chamber of commerce website built for my class">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/style.css">
 
-    <script src="scripts/thankyou.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+
+
 </head>
 <body>
     <header>
         <div class="header-content">
-            <img src="images/logo.webp" alt="Timbuktu Chamber Logo" class="logo">
-            <div class="site-name">Timbuktu Chamber of Commerce</div>
+            <img src="images/sealofcheyennewyoming.png" alt="City of Cheyenne Logo" class="logo">
+            <div class="site-name">Cheyenne Wyoming</div>
+            <button id="menu-button" aria-label="Toggle navigation menu">☰</button>
         </div>
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main class="thankyou-main">
@@ -40,9 +58,10 @@
     </main>
 
     <footer>
-        <p><span id="currentyear">Lorem</span> Keyarra Bassett |
-            United States</p>
-        <p id="lastModified">Lorem ipsum</p>
+        <div class="footer-content">
+            <p><span id="current-year"></span> | United States | Keyarra Bassett | WDD 231</p>
+            <p id="last-modified"></p>
+        </div>
     </footer>
 </body>
 </html>
