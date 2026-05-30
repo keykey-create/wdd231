@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Set the hidden timestamp field with the current date and time
     document.getElementById('timestamp').value = new Date().toISOString();
 
     // --- Modal Logic --- //
