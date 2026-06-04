@@ -1,0 +1,126 @@
+/* Color and Font variables based on the scheme */
+:root {
+    --primary-color: #140a70; /* a calming deep blue */
+    --accent-color: #d8ca06; /* A friendly, warm yellow */
+    --text-color: #14213d; /* Dark, readable text color */
+    --bg-color: #edf2f4; /* Soft, light grey background */
+    --container-bg: #ffffff; /* White for content containers */
+    --border-color: #dee2e6; /* Light border color */
+    
+    --main-font: 'Roboto', sans-serif;
+}
+
+/* General Body Styling */
+body {
+    font-family: var(--main-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--container-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-bottom: 1em;
+}
+
+h2 {
+    font-size: 1.75rem;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 15px;
+    margin-top: 2em;
+}
+
+p, li {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Wireframes Section */
+.wireframes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.wireframe {
+    border: 2px solid var(--border-color);
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+.wireframe h3 {
+    text-align: center;
+    margin-top: 0;
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.wireframe-content {
+    border: 1px dashed var(--primary-color);
+    background-color: var(--container-bg);
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.wireframe-header, .wireframe-footer {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.wireframe-hero {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wireframe-main {
+    padding: 10px;
+}
+
+/* Desktop Wireframe Specifics */
+.wireframe-desktop .wireframe-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.wireframe-desktop .wireframe-content-span-3 {
+    grid-column: span 3;
+}
