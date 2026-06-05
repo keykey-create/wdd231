@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const oneDay = 24 * 60 * 60 * 1000; // milliseconds in a day
 
         if (!lastVisit) {
-            messageElement.textContent = "Welcome! Let us know if you have any questions.";
+            messageElement.textContent = "Welcome to Cheyenne! Contact us if you have questions.";
         } else {
             const timeDifference = now - Number(lastVisit);
             if (timeDifference < oneDay) {
