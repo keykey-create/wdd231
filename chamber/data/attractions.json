@@ -1,0 +1,52 @@
+{
+  "attractions": [
+    {
+      "name": "Cheyenne Depot Museum",
+      "address": "121 W 15th St Cheyenne Wyoming",
+      "description": "The Cheyenne Depot Museum is the steward of the Historic UPRR Depot, a National Historic Landmark. Built in 1886 by the Union Pacific Railroad, it is the last remaining grand railroad station on the transcontinental route.",
+      "image": "images/depot.webp"
+    },
+    {
+      "name": "Cheyenne Botanic Gardens",
+      "address": "710 S Lions Park Dr Cheyenne Wyoming",
+      "description": "The Cheyenne Botanic Gardens exist to cultivate community for the public by providing treasured gardens, educational opportunities, and enrichment.",
+      "image": "images/garden.webp"
+    },
+    {
+      "name": "Big Boy Steam Engine",
+      "address": "1705 Morrie Ave Cheyenne Wyoming",
+      "description": "The original Big Boy steam engine that ran when the railroad was first being built.",
+      "image": "images/bigboy.webp"
+    },
+    {
+      "name": "Ghost Tour Cheyenne Wyoming",
+      "address": "121 W 15th st Cheyenne Wyoming",
+      "description": "This scavenger hunt will help you explore Cheyenne. This top rated Cheyenne Ghost Tour scavenger hunt is 0.50 miles and has 5 stops",
+      "image": "images/ghost.webp"
+    },
+    {
+      "name": "Frontier Trampoline Park",
+      "address": "3501 E Lincolnway Ste B Cheyenne Wyoming",
+      "description": "A trampoline park featuring a large area of wall-to-wall trampolines, guests will have no shortage of premium jumping and bouncing opportunities. Slip the bonds of gravity and harness the power of your inner acrobat.",
+      "image": "images/trampoline.webp"
+    },
+    {
+      "name": "City of Cheyenne Ice and Events Center",
+      "address": "1530 W Lincolnway Cheyenne Wyoming",
+      "description": "Call 433-0024 for  the schedule tab for public skate times and drop-in activities!",
+      "image": "images/ice.webp"
+    },
+    {
+      "name": "Cheyenne Frontier Days",
+      "address": "4610 Carey Avenue Cheyenne Wyoming",
+      "description": "Feel the thrill, the lights, and the pulse of competition at Cheyenne Frontier Days. Whether you’re drawn by the heart-pounding rodeo action, the unforgettable night shows, or the rich experience of Western culture, you’ll leave with the spirit of a modern cowboy. Join us for an event that will stay with you long after the dust settles",
+      "image": "images/rodeo.webp"
+    },
+    {
+      "name": "Cheyenne Aquatic Center",
+      "address": "931 Martin Esquibel st Cheyenne Wyoming",
+      "description": "Make a splash in our indoor pools that offer the perfect environment all year round, rain or shine. The perfect environment for your swimming routines, and healthy lifestyle, whether you're training, exercising, or relaxing.",
+      "image": "images/pool.webp"
+    }
+  ]
+}
