@@ -1,0 +1,117 @@
+/* General Layout Structure */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header, footer {
+    padding: 1rem 5%;
+    background-color: var(--surface-color);
+    box-shadow: var(--shadow);
+    transition: background-color 0.3s;
+}
+main {
+    flex-grow: 1;
+    padding: 2rem 5%;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    z-index: 1001;
+}
+.logo img { width: 40px; height: 40px; }
+.logo h1 { font-size: 1.5rem; margin: 0; }
+.header-controls {
+    display: none;
+}
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/3c/3d/90/fort-collins-colorado.jpg?w=900&h=500&s=1') no-repeat center center/cover;
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 8px;
+}
+.hero-text { max-width: 600px; margin: 0 auto; }
+.weekly-activities, .featured-activities, .page-intro, .reference-content, .leadership {
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 900px;
+}
+.steps, .contact-them { display: flex; flex-direction: column; gap: 2rem; }
+.activity-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+    padding: 1.5rem 5%;
+}
+footer p { margin: 0.25rem 0; }
+@media (min-width: 768px) {
+    #menu-button {
+        display: none;
+    }
+    .header-controls {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    nav {
+        display: flex;
+        gap: 1rem;
+    }
+    nav a {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+    nav a:hover, nav a.active {
+        background-color: var(--accent-color);
+        color: var(--surface-color);
+        text-decoration: none;
+    }
+    .steps, .contact-them { flex-direction: row; justify-content: space-around; }
+    .step, .contact { flex: 1; max-width: 300px; }
+    .activity-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+    .activity-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.mobile-nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--surface-color);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.mobile-nav-overlay.open {
+    display: flex;
+}
+.mobile-nav-overlay nav {
+    flex-direction: column;
+    align-items: center;
+}
+.mobile-nav-overlay nav a {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+.mobile-nav-overlay #theme-toggle-button {
+    margin-top: 2rem;
+}

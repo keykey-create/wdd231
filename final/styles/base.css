@@ -1,0 +1,61 @@
+/* Color and Font variables from the Site Plan */
+:root {
+    --primary-color: ##140a70;
+    --accent-color:#a09605;
+    --text-color: #14213d;
+    --bg-color: #edf2f4;
+    --surface-color: #ffffff;
+    --border-color: #dee2e6;
+    --heading-font: 'Roboto', sans-serif;
+    --body-font: 'Roboto', sans-serif;
+    --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Dark Mode Theme */
+.dark-mode {
+    --primary-color: #48cae4;
+    --accent-color: ##d8ca06;
+    --text-color: #edf2f4;
+    --bg-color: #14213d;
+    --surface-color: #003049;
+    --border-color: #023e8a;
+}
+
+/* General Body Styling & Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    color: var(--secondary-color);
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.75rem; margin-bottom: 1rem; }
+h3 { font-size: 1.25rem; }
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

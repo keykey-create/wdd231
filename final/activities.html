@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheyenne YSA Activities | Activities </title>
+    <meta name="description" content="Welcome to the Cheyenne YSA Activity page. Peruse the different activities we have had, and come join us for future activities.">
+    <meta name="author" content="Keyarra Bassett">
+    <meta property="og:title" content="Cheyenne YSA Activities Activities Page">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Peruse the different activities the Cheyenne YSA is has had, join us for future activities!">
+    <meta property="og:image" content="https://keykey-create.github.io/wdd231/final/images/fort-collins-temple.webp">
+    <meta property="og:url" content="https://keykey-create.github.io/wdd231/final/activities.html">
+
+
+    <link rel="icon" href="favicon.ico" sizes="48x48" type="image/ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <script src="scripts/main.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="images/hero-fortcollins.webp" alt="Fort Collins ">
+            <span>Cheyenne YSA Activities</span>
+        </a>
+        <div class="header-controls">
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="activities.html">Activities</a>
+                <a href="donate.html">Contact Us</a>
+            </nav>
+            <button id="theme-toggle-button" aria-label="Toggle Dark Mode"></button>
+        </div>
+        <button id="menu-button" aria-label="Open Navigation Menu"></button>
+    </header>
+    <main>
+        <section class="page-intro">
+            <h1>Browse Our Activities</h1>
+            <p>Here are all the activities we have done at the Cheyenne YSA.</p>
+        </section>
+        <div id="activity-gallery">
+            <div class="filter-controls">
+                <label for="filter">Filter by:</label>
+                <select id="filter" name="filter">
+                    <option value="all">All organizations</option>
+                    <option value="relief society">Relief Society</option>
+                    <option value="whole branch">Entire Branch</option>
+                    <option value="elders quorum">Elders Quorum</option>
+                </select>
+            </div>
+            <div id="all-activities-grid" class="activity-grid">
+                <p class="loading-message">Loading activities...</p>
+            </div>
+        </div>
+    </main>
+
+    <dialog id="activity-modal">
+        <div id="modal-content"></div>
+        <button id="modal-close-button" aria-label="Close dialog">Close</button>
+    </dialog>
+
+    <footer>
+        <p><span id="current-year"></span> Cheyenne YSA Activities</p>
+        <p>Keyarra Bassett | WDD 231 Final Project</p>
+        <p><a href="references.html">References</a></p>
+        <p><a href="https://youtu.be/KwhPEEm6AL0" target="_blank">Project Video</a></p>
+    </footer>
+</body>
+</html>

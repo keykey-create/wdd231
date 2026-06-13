@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "name": "Relief Society Temple Trip",
+    "date": "06/29/2026",
+    "participants": "Future Trip",
+    "description": "The Relief Society is doing an Endowment session on Friday the 26th at 7:00 PM",
+    "imageUrl": "images/fort-collins-temple.webp",
+    "org": "Relief Society"
+  },
+  {
+    "id": 2,
+    "name": "Ice Cream trip to Culvers",
+    "date": "06/15/2026",
+    "participants": "Future Trip",
+    "description": "We will be meeting at Mylar Park and walking to culvers where we will get a sweet treat.",
+    "imageUrl": "images/culvers-icecream.webp",
+    "org": "Whole Branch"
+  },
+  {
+    "id": 3,
+    "name": "YSA Conference",
+    "date": "06/26/2026",
+    "participants": "Future Trip",
+    "description": "The Denver area is hosting a YSA Conference with events and conferences. ",
+    "imageUrl": "images/golf-conference.webp",
+    "org": "Whole Branch"
+  },
+  {
+    "id": 4,
+    "name": "YSA BBQ",
+    "date": "06/01/2026",
+    "participants": "30 People",
+    "description": "Sister Hess Hosted a BBQ to learn about the freshly graduated seniors, and welcome them into our branch",
+    "imageUrl": "images/bbq.webp",
+    "org": "Whole Branch"
+  },
+  {
+    "id": 5,
+    "name": "Frisbee Golf",
+    "date": "06/08/2026",
+    "participants": "15 People",
+    "description": "Elders Quorum hosted a frisbee golf night at dry creek park.",
+    "imageUrl": "images/frisbee-golf.webp",
+    "org": "Elders Quorum"
+  },
+  {
+    "id": 6,
+    "name": "Movie Night",
+    "date": "06/10/2026",
+    "participants": "3 People",
+    "description": "Relief Society had a movie night where they watched Project Hail Mary",
+    "imageUrl": "images/popcorn.webp",
+    "org": "Relief Society"
+  },
+  {
+    "id": 7,
+    "name": "Cemetery Scavenger Hunt",
+    "date": "05/25/2026",
+    "participants": "12 People",
+    "description": "For Memorial day, the sunday school president hosted a famous person scavenger hunt.",
+    "imageUrl": "images/cemetery.webp",
+    "org": "Elders Quorum"
+  },
+  {
+    "id": 8,
+    "name": "Game Night",
+    "date": "05/18/2026",
+    "participants": "20 People",
+    "description": "The whole of the YSA hosted a board game night.",
+    "imageUrl": "images/gamenight.webp",
+    "org": "Whole Branch"
+  },
+  {
+    "id": 9,
+    "name": "Capture the Flag",
+    "date": "04/04/2026",
+    "participants": "10 People",
+    "description": "Elders Quorum hosted a a capture the flag night at Holiday Park",
+    "imageUrl": "images/frisbee-golf.webp",
+    "org": "Elders Quorum"
+  },
+  {
+    "id": 10,
+    "name": "Stake Conference",
+    "date": "04/25/2026",
+    "participants": "1,000 People",
+    "description": "The Stake hosted a conference for the teachings and helping of the whole branch.",
+    "imageUrl": "images/stakeconference.webp",
+    "org": "Whole Branch"
+  },
+  {
+    "id": 11,
+    "name": "Volleyball",
+    "date": "04/22/2026",
+    "participants": "35 People",
+    "description": "The Relief Society hosted a volleyball night for the whole YSA",
+    "imageUrl": "images/volleyball.webp",
+    "org": "Whole Branch"
+  },
+  {
+    "id": 12,
+    "name": "Canadian Bowling",
+    "date": "04/13/2026",
+    "participants": "40 People",
+    "description": "The YSA went out to do Canadian bowling.",
+    "imageUrl": "images/bowling.webp",
+    "org": "Whole Branch"
+  },
+  {
+    "id": 13,
+    "name": "Relief Society Temple Trip",
+    "date": "03/31/2026",
+    "participants": "9 People",
+    "description": "The Relief Society did an Endowment session and got Freddy's after.",
+    "imageUrl": "images/relief-society-temple.webp",
+    "org": "Relief Society"
+  },
+  {
+    "id": 14,
+    "name": "PowerPoints and Pancakes",
+    "date": "03/11/2026",
+    "participants": "25 People",
+    "description": "The YSA created and shared 3-minute long powerpoints.",
+    "imageUrl": "images/powerpoint.webp",
+    "org": "Whole Branch"
+  },
+  {
+    "id": 15,
+    "name": "Job Fair",
+    "date": "03/02/2026",
+    "participants": "20 People",
+    "description": "The YSA presidency hosted an employment night to share employment advice.",
+    "imageUrl": "images/job.webp",
+    "org": "Whole Branch"
+  }
+]

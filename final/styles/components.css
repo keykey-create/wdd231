@@ -1,0 +1,91 @@
+/* Hamburger Menu Button */
+#menu-button {
+    display: block; /* Visible by default on mobile */
+    background: none; border: none;
+    width: 30px; height: 30px;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230077b6'%3E%3Cpath d='M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1001;
+    transition: transform 0.3s ease;
+}
+#menu-button.open {
+    transform: rotate(90deg);
+}
+
+/* Dark Mode Icon Button */
+#theme-toggle-button {
+    background: none; border: none; cursor: pointer;
+    width: 24px; height: 24px;
+    padding: 0;
+    color: var(--primary-color);
+}
+#theme-toggle-button svg {
+    width: 100%; height: 100%;
+    fill: currentColor;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color); color: #fff;
+    padding: 0.8rem 1.5rem; border-radius: 5px;
+    font-weight: 700; text-decoration: none;
+    margin-top: 1rem; border: none; cursor: pointer;
+}
+.cta-button:hover { opacity: 0.9; }
+
+/* activity Card Styling */
+.activity-card {
+    background-color: var(--surface-color); border-radius: 8px;
+    box-shadow: var(--shadow); overflow: hidden;
+    cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;
+}
+.activity-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.12); }
+.activity-card img { width: 100%; height: 250px; object-fit: cover; }
+.activity-card-info { padding: 1rem; text-align: left; }
+.activity-card-info h3 { margin-bottom: 0.5rem; }
+
+/* Modal Dialog */
+#activity-modal {
+    width: 90%; max-width: 600px;
+    border: 1px solid var(--border-color); border-radius: 8px;
+    padding: 2rem; background-color: var(--surface-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+#activity-modal::backdrop { background-color: rgba(0, 0, 0, 0.6); }
+#modal-content { display: grid; gap: 1rem; }
+#modal-content img { width: 100%; max-height: 300px; object-fit: cover; border-radius: 5px; }
+#modal-close-button {
+    position: absolute; top: 10px; right: 10px;
+    background: none; border: none;
+    font-size: 1.5rem; cursor: pointer;
+}
+
+/* Form Styling */
+.form-container {
+    max-width: 700px; margin: 2rem auto;
+    background-color: var(--surface-color); padding: 2rem;
+    border-radius: 8px;
+}
+form fieldset { border: 1px solid var(--border-color); margin-bottom: 1.5rem; padding: 1rem; }
+form label { display: block; margin-bottom: 0.5rem; }
+form input[type="text"],
+form input[type="email"],
+form select,
+form textarea {
+    width: 100%; padding: 0.8rem;
+    margin-bottom: 1rem; border: 1px solid var(--border-color);
+    border-radius: 4px; background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.filter-controls { margin-bottom: 2rem; text-align: center; }
+
+/* THIS IS THE FIX: Added styles for the loading-message class */
+.loading-message {
+    text-align: center;
+    padding: 2rem;
+    font-style: italic;
+    color: var(--text-color);
+}
