@@ -1,6 +1,6 @@
 /* Color and Font variables from the Site Plan */
 :root {
-    --primary-color: ##140a70;
+    --primary-color: #140a70;
     --accent-color:#a09605;
     --text-color: #14213d;
     --bg-color: #edf2f4;
@@ -14,7 +14,7 @@
 /* Dark Mode Theme */
 .dark-mode {
     --primary-color: #48cae4;
-    --accent-color: ##d8ca06;
+    --accent-color: #d8ca06;
     --text-color: #edf2f4;
     --bg-color: #14213d;
     --surface-color: #003049;
