@@ -33,7 +33,7 @@ header {
     display: none;
 }
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/3c/3d/90/fort-collins-colorado.jpg?w=900&h=500&s=1') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://churchofjesuschristtemples.org/assets/img/temples/fort-collins-colorado-temple/fort-collins-colorado-temple-50577-main.jpg') no-repeat center center/cover;
     color: white;
     padding: 4rem 2rem;
     text-align: center;
